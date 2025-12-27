@@ -1,0 +1,128 @@
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+form,
+input,
+button,
+img {
+    margin: 0;
+    /* 外边距清零 */
+    padding: 0;
+    /* 内边距清零 */
+}
+
+img,
+input,
+button {
+    border: none;
+    /* 去掉边框 */
+    outline-style: none;
+    /* 去掉焦点时的蓝色轮廓 */
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* 4. 统一 input 字体，防止浏览器fallback到宋体 */
+input {
+    font-family: "微软雅黑", "宋体";
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+/* 8. 图片放在div中时，图片下方会出现一个神秘的空白缝隙：*/
+img {
+    vertical-align: middle;
+    /* 去掉图片与基线对齐产生的空白缝隙 */
+}
+
+/* 10. 全局正文字体、行高、颜色、背景统一；禁止横向滚动条 */
+body {
+    font: 12px/150% "微软雅黑", Verdana, "\5b8b\4f53";
+    /* 字号/行高/字体栈 */
+    color: #666;
+    /* 默认字色 */
+    background: #F0F3EF;
+    /* 页面背景 */
+    overflow-x: hidden;
+    /* 兜底：禁止横向滚动 */
+}
+
+/* 11. 解决父元素高度塌陷问题*/
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    /* 伪元素必须有content属性才能显示,现在内容为空 */
+    display: table;
+    /* 触发BFC，防止margin合并 */
+    clear: both;
+    /* 真正清除浮动 */
+}
+
+/* 12. 链接默认样式与悬停样式 */
+a {
+    color: #666;
+    text-decoration: none;
+    /* 去掉下划线 */
+}
+
+a:hover {
+    color: #C81623;
+    /* 悬停高亮红色 */
+}
+
+/* 13. 标题标签去加粗、去下划线、字号重置 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    /* 外边距清零 */
+    padding: 0;
+    /* 内边距清零 */
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+    /* 相对于父级字号 */
+}
+
+/* 14.搞不懂*/
+i,
+em {
+    font-style: normal;
+    /* 去斜体 */
+    text-decoration: none;
+    /* 去删除线/下划线 */
+}
+
+/* 15. 公共颜色类（购物车/第一个热词/免费注册/请登录） */
+.col-red {
+    color: #F10215 !important;
+}
+
+.w {
+    /* 版心：1190px 居中 */
+    width: 1190px;
+    margin: auto;
+}
+
+/* ? */
+.fl {
+    float: left;
+    /* 元素向左浮动 */
+}
+
+.hide {
+    display: none;
+    /* 隐藏元素 */
+}
